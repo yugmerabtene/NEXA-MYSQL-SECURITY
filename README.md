@@ -10,7 +10,8 @@
 4. **Pare-feu UFW : politique stricte et ports minimaux**
 5. **Fail2ban : protection contre les attaques bruteforce**
 6. **Suricata (IDS) ou alternative : détection d’intrusion**
-7. ✅ **💡 Améliorations proposées**
+7. WAF Web Application Firewall
+8. ✅ **💡 Améliorations proposées**
    - Changement automatique de port SSH à intervalle régulier
    - Notification d’alerte par mail (Fail2ban + logwatch)
    - Mise en place de journaux centralisés (rsyslog / Graylog / ELK)
