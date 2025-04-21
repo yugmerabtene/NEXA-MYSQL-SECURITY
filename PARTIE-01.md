@@ -1,6 +1,6 @@
-# 🔐 **PARTIE 1 – Sécurisation du Serveur Linux**
+# 🔐 **PARTIE 1 – Sécurisation du Serveur Linux + Mise en place d’un WAF (ModSecurity)**
 
-Cette partie vise à **préparer un serveur Linux** (Debian/Ubuntu) à l’hébergement de services web de manière **sécurisée**, avant toute installation de stack ou d’application.
+Cette partie vise à **préparer un serveur Linux** (Debian/Ubuntu) à l’hébergement de services web de manière **sécurisée**, avant toute installation de stack ou d’application, **et à intégrer un WAF (ModSecurity)** pour protéger les applications web.
 
 ---
 
@@ -178,7 +178,74 @@ sudo systemctl enable suricata
 sudo systemctl start suricata
 ```
 
-Suricata va automatiquement surveiller les interfaces réseaux principales (`eth0`, `ens3`, etc).
+Suricata surveille automatiquement les interfaces réseaux principales (`eth0`, `ens3`, etc).
+
+---
+
+## 🛡️ Étape 7 – Mise en place d’un WAF : **ModSecurity + OWASP Core Rule Set**
+
+### 🔍 Objectif :
+Protéger les applications web contre les attaques : injections SQL, XSS, LFI/RFI, etc.
+
+---
+
+### 📦 Installer ModSecurity pour Apache :
+```bash
+sudo apt install libapache2-mod-security2 -y
+```
+
+Activer le module :
+```bash
+sudo a2enmod security2
+sudo systemctl restart apache2
+```
+
+---
+
+### 🔧 Activer ModSecurity en mode **de protection (ON)** :
+```bash
+sudo nano /etc/modsecurity/modsecurity.conf-recommended
+```
+
+Changer :
+```ini
+SecRuleEngine DetectionOnly
+```
+en
+```ini
+SecRuleEngine On
+```
+
+Puis enregistrer en tant que fichier actif :
+```bash
+sudo cp /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf
+```
+
+---
+
+### 📦 Ajouter les règles OWASP (CRS) :
+```bash
+cd /etc/modsecurity
+sudo git clone https://github.com/coreruleset/coreruleset.git
+cd coreruleset
+sudo cp crs-setup.conf.example crs-setup.conf
+```
+
+Créer un lien vers les règles dans Apache :
+```bash
+sudo nano /etc/apache2/mods-enabled/security2.conf
+```
+
+Ajouter à la fin :
+```apache
+IncludeOptional /etc/modsecurity/coreruleset/crs-setup.conf
+IncludeOptional /etc/modsecurity/coreruleset/rules/*.conf
+```
+
+Redémarrer Apache :
+```bash
+sudo systemctl restart apache2
+```
 
 ---
 
@@ -193,3 +260,4 @@ Suricata va automatiquement surveiller les interfaces réseaux principales (`eth
 | 🔥 Pare-feu UFW                            | ✔️ ports 80/443/2222 ouverts |
 | 🚨 Protection brute-force (Fail2ban)       | ✔️ activée         |
 | 🧠 IDS (Suricata)                          | ✔️ en surveillance réseau |
+| 🛡️ WAF (ModSecurity + OWASP CRS)          | ✔️ activé et configuré |
