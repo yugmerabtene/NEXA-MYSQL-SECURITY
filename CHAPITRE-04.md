@@ -1,4 +1,4 @@
-# 🌐 **PARTIE 4 – Installation et sécurisation de WordPress**
+# 🌐 **CHAPITRE-04 – Installation et sécurisation de WordPress**
 
 ---
 
