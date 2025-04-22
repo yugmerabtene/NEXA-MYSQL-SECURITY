@@ -247,6 +247,13 @@ IncludeOptional /etc/modsecurity/coreruleset/crs-setup.conf
 IncludeOptional /etc/modsecurity/coreruleset/rules/*.conf
 ```
 
+✅ Solution recommandée :
+Supprime ou commente cette ligne uniquement :
+
+Modifier
+```apache
+# IncludeOptional /usr/share/modsecurity-crs/*.load
+```
 Redémarrer Apache :
 ```bash
 sudo systemctl restart apache2
