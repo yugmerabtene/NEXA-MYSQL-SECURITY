@@ -249,8 +249,6 @@ IncludeOptional /etc/modsecurity/coreruleset/rules/*.conf
 
 ✅ Solution recommandée :
 Supprime ou commente cette ligne uniquement :
-
-Modifier
 ```apache
 # IncludeOptional /usr/share/modsecurity-crs/*.load
 ```
