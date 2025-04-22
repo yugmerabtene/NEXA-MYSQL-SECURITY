@@ -1,4 +1,4 @@
-# 🔐 **PARTIE 1 – Sécurisation du Serveur Linux + Mise en place d’un WAF (ModSecurity)**
+# 🔐 **PARTIE 1 – Sécurisation du Serveur Linux**
 
 Cette partie vise à **préparer un serveur Linux** (Debian/Ubuntu) à l’hébergement de services web de manière **sécurisée**, avant toute installation de stack ou d’application, **et à intégrer un WAF (ModSecurity)** pour protéger les applications web.
 
