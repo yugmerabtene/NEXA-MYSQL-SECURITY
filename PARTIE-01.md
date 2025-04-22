@@ -271,3 +271,33 @@ sudo systemctl restart apache2
 | 🚨 Protection brute-force (Fail2ban)       | ✔️ activée         |
 | 🧠 IDS (Suricata)                          | ✔️ en surveillance réseau |
 | 🛡️ WAF (ModSecurity + OWASP CRS)          | ✔️ activé et configuré |
+
+---
+## TP-01 : 
+---
+
+# 🧪 **TP Réseau – Mise en place d’une Interface Web de Supervision de Suricata avec Apache2**
+
+## 🎯 Objectifs pédagogiques :
+- Mettre en œuvre un système de **détection d’intrusion (IDS)** avec Suricata
+- Activer et analyser les **logs d’alertes réseau en JSON**
+- Déployer une interface web pour **visualiser en temps réel les alertes de sécurité**
+- Intégrer l’interface à un serveur web **Apache2** pour un accès distant
+- Protéger le système de supervision via **pare-feu**, **droits utilisateurs** et **bonnes pratiques**
+
+---
+
+## 📋 Consignes :
+
+1. Le serveur fonctionne sous **Debian/Ubuntu** avec un compte non-root (`devadmin`).
+2. Suricata est déjà installé et en cours d’exécution sur l’interface réseau (`ens3` ou `eth0`).
+3. Le pare-feu `ufw` est actif, avec les ports essentiels ouverts.
+4. Le port SSH est sécurisé sur `22 ou 2222 ou 1984 ou le port que vous aurez modifié` par clé publique.
+5. Le serveur web **Apache2** est installé.
+6. Vous devez :
+   - Configurer Suricata pour écrire les logs d’alertes au format **EVE JSON**
+   - Installer **Scirius Community Edition**
+   - Intégrer Scirius via **Apache2 + mod_wsgi**
+   - Accéder à l’interface web via un navigateur (HTTP)
+
+---
