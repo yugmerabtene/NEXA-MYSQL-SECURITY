@@ -1,4 +1,4 @@
-# 🧨 **PARTIE 07 – Hors-Série : Simulation d’une Attaque SQL Injection avec sqlmap sur une Base de Données MySQL Non Sécurisée**
+# 🧨 **CHAPITRE-07 – Hors-Série : Simulation d’une Attaque SQL Injection avec sqlmap sur une Base de Données MySQL Non Sécurisée**
 
 
 1. Création d’un environnement vulnérable avec MySQL non sécurisé  
