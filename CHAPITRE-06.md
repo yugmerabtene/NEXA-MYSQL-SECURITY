@@ -1,4 +1,4 @@
-# 📊 **PARTIE 6 – Monitoring et audit de sécurité**
+# 📊 **CHAPITRE-06 – Monitoring et audit de sécurité**
 
 ---
 
