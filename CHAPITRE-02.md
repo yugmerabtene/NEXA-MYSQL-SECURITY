@@ -1,4 +1,4 @@
-# 🧱 **PARTIE 2 – Installation Sécurisée du Stack LAMP**
+# 🧱 **CHAPITRE-02 – Installation Sécurisée du Stack LAMP**
 
 > Le stack **LAMP** (Linux, Apache, MySQL, PHP) est une base robuste pour héberger des sites comme WordPress. Dans cette partie, on installe **chaque composant** avec une **configuration renforcée**.
 
