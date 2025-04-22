@@ -79,6 +79,11 @@ sudo nano /etc/ssh/sshd_config
 Port 2222
 PermitRootLogin no
 PasswordAuthentication no
+
+
+si la connexion marche toujours sans clé chercher ça : 
+grep -ir "PasswordAuthentication" /etc/ssh/sshd_config.d/
+et mettre PasswordAuthentication no 
 ```
 
 Puis :
