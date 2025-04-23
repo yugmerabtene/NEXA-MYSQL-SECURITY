@@ -82,4 +82,3 @@ Après le redémarrage d'Apache, vérifie que l'accès à **wp-login.php** ou à
 
 ---
 Ce guide détaille les étapes de configuration de **ModSecurity** pour un environnement **WordPress** afin de lever les restrictions inutiles tout en maintenant une sécurité optimale. Pour toute difficulté supplémentaire ou exploration de configurations avancées, n'hésite pas à consulter la documentation officielle ou me contacter.
-```
