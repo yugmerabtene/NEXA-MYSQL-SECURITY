@@ -196,6 +196,7 @@ Protéger les applications web contre les attaques : injections SQL, XSS, LFI/RF
 
 ### 📦 Installer ModSecurity pour Apache :
 ```bash
+sudo apt install apache2 -y
 sudo apt install libapache2-mod-security2 -y
 ```
 
