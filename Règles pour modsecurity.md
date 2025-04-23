@@ -1,6 +1,3 @@
-Je comprends maintenant, tu veux que tout soit dans un **seul fichier Markdown**, sans coupures. Voici donc le fichier complet avec tout dedans, prêt à être copié dans un fichier unique :
-
-```markdown
 # ModSecurity Configuration Guide
 
 ## 1. Création du répertoire pour les logs (si nécessaire)
@@ -84,8 +81,5 @@ Cela permet de recharger les configurations et prendre en compte les exceptions 
 Après le redémarrage d'Apache, vérifie que l'accès à **wp-login.php** ou à d'autres pages similaires n'est plus bloqué par **ModSecurity** et que les modifications ont été appliquées avec succès.
 
 ---
-
-## Conclusion
-
 Ce guide détaille les étapes de configuration de **ModSecurity** pour un environnement **WordPress** afin de lever les restrictions inutiles tout en maintenant une sécurité optimale. Pour toute difficulté supplémentaire ou exploration de configurations avancées, n'hésite pas à consulter la documentation officielle ou me contacter.
 ```
