@@ -112,7 +112,8 @@ Suivre l’installation de WordPress :
 - Choisir la langue
 - Renseigner les informations du site
 - Créer un **compte admin fort** (nom + mot de passe fort !)
-
+- Lors de la connexion, vous risquez d'être bloqué par modsecurity, suivre ci-dessous le lien pour contrer cela.
+- https://github.com/yugmerabtene/NEXA-MYSQL-SECURITY/blob/main/Règles%20pour%20modsecurity.md
 ---
 
 ## 🛡️ Étape 8 – Sécuriser WordPress après installation
